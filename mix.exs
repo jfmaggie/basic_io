@@ -38,7 +38,7 @@ defmodule BasicIo.Mixfile do
   end
   def application(_target) do
     [mod: {BasicIo.Application, []},
-     extra_applications: [:logger]]
+     extra_applications: [:logger, :runtime_tools]]
   end
 
   # Dependencies can be Hex packages:
@@ -60,7 +60,9 @@ defmodule BasicIo.Mixfile do
   def deps(target) do
     [
       {:bootloader, "~> 0.1"},
-      {:nerves_runtime, "~> 0.4"}
+      {:nerves_runtime, "~> 0.4"},
+      {:nerves_init_gadget, "~> 0.1"},
+      {:grovepi, "~> 0.3"}
     ] ++ system(target)
   end
 
