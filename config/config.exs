@@ -17,7 +17,7 @@ use Mix.Config
 # docs for separating out critical OTP applications such as those
 # involved with firmware updates.
 config :bootloader,
-  init: [:nerves_runtime],
+  init: [:nerves_runtime, :nerves_init_gadget],
   app: :basic_io
 
 config :nerves_firmware_ssh,
